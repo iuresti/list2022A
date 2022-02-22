@@ -1,6 +1,10 @@
 package uaslp.objetos.list.linkedlist;
 
 public class LinkedList {
+
+    private static final int UNA_CONSTANTE = 10;
+
+
     private Node head;
     private Node tail;
     private int size;
