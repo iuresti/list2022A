@@ -11,6 +11,9 @@ import uaslp.objetos.list.linkedlist.LinkedList;
 public class Main {
 
     public static void main(String[] args) {
+
+        assert(args != null);  //AssertionError  java -enableassertions
+
         List<String> team1 = new LinkedList<>();
         List<String> team2 = new LinkedList<>();
         List<String> team3 = new LinkedList<>();
