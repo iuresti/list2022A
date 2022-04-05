@@ -9,7 +9,7 @@ public class LinkedList <T> implements List <T> {
 
     private Node<T> head;
     private Node<T> tail;
-    private int size = 1;
+    private int size;
 
     public void addAtTail(T data) throws NotNullValuesAllowedException {
 
