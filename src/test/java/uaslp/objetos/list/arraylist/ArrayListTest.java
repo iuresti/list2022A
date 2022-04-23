@@ -1,4 +1,4 @@
-package uaslp.objetos.list.linkedlist;
+package uaslp.objetos.list.arraylist;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,7 @@ import uaslp.objetos.list.Iterator;
 import uaslp.objetos.list.exception.NotNullValuesAllowedException;
 import uaslp.objetos.list.exception.NotValidIndexException;
 
-public class LinkedListTest {
+public class ArrayListTest {
 
     // INICIALIZACIÓN / PREPARACIÓN
     // EJECUCIÓN --> Llamar al método probado
@@ -18,7 +18,7 @@ public class LinkedListTest {
     @Test
     public void givenANewList_whenGetSize_thenResultIsZero() {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         // When:
         int sizeOfList = list.getSize();
@@ -30,7 +30,7 @@ public class LinkedListTest {
     @Test
     public void givenANewList_whenGetAt_thenExceptionIsThrown() {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         // When:
         try {
@@ -44,7 +44,7 @@ public class LinkedListTest {
     @Test
     public void givenANewList_whenAddAtFrontAnElement_thenSizeIsOne() throws NotNullValuesAllowedException {
         // Given
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         // When
         list.addAtFront("Hola");
@@ -59,7 +59,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWith1Element_whenAddAtFrontAnElement_thenSizeIsTwo() throws NotNullValuesAllowedException {
         // Given
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Hola");
 
@@ -77,7 +77,7 @@ public class LinkedListTest {
     @Test
     public void givenANewList_whenAddAtTailAnElement_thenSizeIsOne() throws NotNullValuesAllowedException {
         // Given
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         // When
         list.addAtTail("Hola");
@@ -92,7 +92,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWith1Element_whenAddAtTailAnElement_thenSizeIsTwo() throws NotNullValuesAllowedException {
         // Given
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtTail("Hola");
 
@@ -110,7 +110,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithOneElement_whenRemove_thenSizeIsZero() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Hola");
 
@@ -127,7 +127,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithTwoElements_whenRemoveIndex0_thenSizeIsOne() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Hola");
         list.addAtTail("Mundo");
@@ -146,7 +146,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithTwoElements_whenRemoveIndex3_thenNotValidIndexExceptionIsThrown() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Hola");
         list.addAtTail("Mundo");
@@ -159,7 +159,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithTwoElements_whenAddAtFrontNullValue_thenNotNullValuesAllowedExceptionIsThrown() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Hola");
         list.addAtTail("Mundo");
@@ -172,7 +172,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithTwoElements_whenAddAtTailNullValue_thenNotNullValuesAllowedExceptionIsThrown() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Hola");
         list.addAtTail("Mundo");
@@ -185,7 +185,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithTwoElements_whenSetAtNullValue_thenNotNullValuesAllowedExceptionIsThrown() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Hola");
         list.addAtTail("Mundo");
@@ -198,7 +198,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithTwoElements_whenSetAtIndex3_thenNotValidIndexExceptionIsThrown() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>(5);
 
         list.addAtFront("Hola");
         list.addAtTail("Mundo");
@@ -211,7 +211,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithTwoElements_whenRemoveIndex1_thenSizeIsOne() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Hola");
         list.addAtTail("Mundo");
@@ -230,7 +230,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWith3Elements_whenRemoveElementAtTail_thenSizeIsTwo() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Adios");
         list.addAtTail("Mundo");
@@ -251,7 +251,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithThreeElements_whenRemoveIndex1_thenSizeIsTwo() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtTail("Mundo");
         list.addAtTail("Cruel");
@@ -272,7 +272,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithThreeElements_whenRemoveAll_thenSizeIsZero() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtTail("Mundo");
         list.addAtTail("Cruel");
@@ -290,7 +290,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWithTwoElements_whenSetAtZero_thenElementIsModified() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtTail("Mundo");
         list.addAtFront("Adios");
@@ -309,7 +309,7 @@ public class LinkedListTest {
     @Test
     public void givenAListWith3Elements_whenGetIterator_thenIteratorWorksOverAllThreeElements() throws NotNullValuesAllowedException {
         // Given:
-        LinkedList<String> list = new LinkedList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.addAtFront("Adios");
         list.addAtTail("Mundo");
